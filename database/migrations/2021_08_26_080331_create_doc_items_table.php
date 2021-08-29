@@ -13,7 +13,7 @@ class CreateDocitemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('docitems', function (Blueprint $table) {
+        Schema::create('doc_items', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('debit');
             $table->unsignedBigInteger('credit');
