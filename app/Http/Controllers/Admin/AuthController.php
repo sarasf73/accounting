@@ -37,8 +37,8 @@ class AuthController extends Controller
         ]);
     }
 
-
-    /*public function store(Request $request)
+/*
+    public function store(Request $request)
     {
         $attributes = $request->validate([
             'name' => 'required|string|max:255',
