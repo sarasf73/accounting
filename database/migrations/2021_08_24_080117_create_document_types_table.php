@@ -16,6 +16,7 @@ class CreateDocumentTypesTable extends Migration
         Schema::create('document_types', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->softDeletes('deleted_at');
             $table->timestamps();
         });
     }
@@ -28,5 +29,6 @@ class CreateDocumentTypesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('document_types');
+
     }
 }
