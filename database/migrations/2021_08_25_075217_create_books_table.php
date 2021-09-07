@@ -18,6 +18,7 @@ class CreateBooksTable extends Migration
             $table->string('title');
             $table->foreignId('parent_id')->constrained('books','id');
             $table->timestamps();
+            $table->softDeletes('deleted_at');
         });
     }
 
