@@ -33,6 +33,8 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
 
     Route::delete('/user', [\App\Http\Controllers\Admin\AuthController::class ,'destroy']);
     Route::apiResource('/document_types',\App\Http\Controllers\Admin\DocumentTypeController::class);
+
 });
+Route::apiResource('books',\App\Http\Controllers\Admin\BookController::class);
 
 

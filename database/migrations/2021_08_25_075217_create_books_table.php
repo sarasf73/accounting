@@ -16,9 +16,9 @@ class CreateBooksTable extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id()->unique();
             $table->string('title');
-            $table->foreignId('parent_id')->constrained('books','id');
+            $table->foreignId('parent_id')->nullable()->constrained('books','id');
             $table->timestamps();
-            $table->softDeletes('deleted_at');
+           // $table->softDeletes('deleted_at');
         });
     }
 

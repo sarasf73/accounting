@@ -9,9 +9,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Book extends Model
 {
     use HasFactory;
-    use SoftDeletes;
+   // use SoftDeletes;
+
     protected $fillable =[
         'title',
         'parent_id'
     ];
+
+    public  function books()
+    {
+       return $this->belongsTo(Book::class);
+    }
 }
